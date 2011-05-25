@@ -610,8 +610,8 @@ PHP_FUNCTION(gree_fastprocessor_listen) {
 	int sock_path_len;
 	char *handler = NULL;
 	int handler_len;
-	int concurrency = 0;
-	int max_request = 0;
+	long concurrency = 0;
+	long max_request = 0;
 
 	if (zend_parse_parameters(ZEND_NUM_ARGS() TSRMLS_CC, "ssll", &sock_path, &sock_path_len, &handler, &handler_len, &concurrency, &max_request) == FAILURE) {
 		return;
